@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alexis Villavicencio">
+    <meta name="keywords" content="Fundamentos,JS,pratica">
+    <title>Practica</title>
+</head>
+<body style="background-color: #eee;">
+    <h1 style="text-align: center;">Calculadora del Impuesto a la Renta</h1>
+    <div style="display: flex;">
+        <div style="margin: auto;background-color: #fff;padding:10px;justify-content: center;align-items: center;">
+            <table>
+                <tr>
+                    <td>
+                        <h3>Ingresos</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="ingresos">Ingresos:</label>
+                    </td>
+                    <td>
+                        <input id="ingresos" type="number" min=0 step=0.1 required>
+                    </td>
+                </tr>
+                <!-- <hr/> -->
+                <tr>
+                    <td>
+                        <h3>Gastos</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="vivienda">Vivienda:</label>
+                    </td>
+                    <td>
+                        <input id="vivienda" type="number" min=0 step=0.1 required><p></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="educacion">Educación:</label>
+                    </td>
+                    <td>
+                        <input id="educacion" type="number" min=0 step=0.1 required><p></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="alimentacion">Alimentacion:</label>
+                    </td>
+                    <td>
+                        <input id="alimentacion" type="number" min=0 step=0.1 required><p></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="vestimenta">Vestimenta:</label>
+                    </td>
+                    <td>
+                        <input id="vestimenta" type="number" min=0 step=0.1 required><p></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="turismo">Turismo:</label>
+                    </td>
+                    <td>
+                        <input id="turismo" type="number" min=0 step=0.1 required><p></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="salud">Salud:</label>
+                    </td>
+                    <td>
+                        <input id="salud" type="number" min=0 step=0.1 required><p></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="gastosP">Total gastos personales:</label>
+                    </td>
+                    <td>
+                        <input id="gastosP" type="number" min=0 step=0.1 required><p></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button onclick="calculoImpuestoRenta();">Enviar</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <h3>Impuesto a la renta</h3>
+    <div id="respuesta"></div>
+</body>
+    <!-- <script src="js/app.js"></script> -->
+    <script src="js/ejercicioImpuesto.js"></script>
+</html>
