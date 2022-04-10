@@ -86,8 +86,3 @@ function camposVacios(){
     }
     return des;
 }
-
-// var ingresos=120000;
-// var gastos=5000;
-// console.log('el impuesto es de: '+impuestoCalculado);
-// document.write("<h3>Su impuesto a la renta es </h3>"+impuestoCalculado)
