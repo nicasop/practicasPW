@@ -1,0 +1,14 @@
+<div *ngFor="let gasto of gastos" class="accordion accordion-flush" id="accordionFlushExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-heading{{gasto.selector}}">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#'+gasto.selector" aria-expanded="false" [attr.aria-controls]="gasto.selector">
+           {{gasto.nombre}}
+        </button>
+      </h2>
+      <div [id]="gasto.selector" class="accordion-collapse collapse" [attr.aria-labelledby]="'flush-headind'+gasto.selector" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">{{gasto.descripcion}}</div><br/>
+        <button (click)="informacion(gasto.nombre)" class="btn btn-info">Información</button>
+        <button (click)="borrarGastos(gasto.nombre)" class="btn btn-warning">Borrar</button>
+      </div>
+    </div>
+</div>

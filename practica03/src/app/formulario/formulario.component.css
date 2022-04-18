@@ -1,0 +1,13 @@
+.contenedor{
+    display:flex;
+}
+
+.formulario{
+    margin: 10px auto;
+    background-color: #fff;
+    padding:10px;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px black;
+
+}
