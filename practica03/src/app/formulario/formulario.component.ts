@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-formulario',
@@ -7,8 +8,6 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class FormularioComponent implements OnInit {
-
-  constructor() { }
 
   ngOnInit(): void {
   }
@@ -23,8 +22,18 @@ export class FormularioComponent implements OnInit {
   calculoImpuestoRenta(){
     var ingresos = document.querySelector('#ingresos') as HTMLInputElement;
     var gastos = this.calculoGastos();
-    var cont=0;
     var baseImponible=ingresos.valueAsNumber-gastos;
+    if (ingresos.valueAsNumber <= 0){
+      this.alertError('El valor de ingresos no esta ingresado correctamente');
+      this.limpiarCampos();
+    }
+    else if(baseImponible < 0){
+      this.alertError('El valor de los ingresos no puede ser inferior al valor de los gastos')
+      let ing = document.querySelector('#ingresos') as HTMLInputElement;
+      ing.value = "";
+    }
+    else{
+      var cont=0;
     for(var i=0; i<this.dimension; i++){
         if(i <= this.dimension - 2){
             if (baseImponible>this.tablaImpuesto.fBasica[i] && baseImponible<=this.tablaImpuesto.fBasica[i+1]) {
@@ -40,13 +49,9 @@ export class FormularioComponent implements OnInit {
     var excedente=baseImponible-this.tablaImpuesto.fBasica[cont]; 
     var porcentajeExcedente=excedente*this.tablaImpuesto.ifExcedente[cont];
     var impuesto=impuestoFraccionBasica+porcentajeExcedente;
-    console.log(impuesto);
-    let respuestaCont = document.querySelector('#respuesta') as HTMLDivElement;
-    let respuesta = document.createElement("p");
-    respuesta.textContent = `Su impuesto a la renta es ${impuesto}`;
-    respuestaCont.appendChild(respuesta);
-    respuestaCont.focus();
-    this.limpiarCampos(); 
+    this.alertSuccess(`Su impuesto a la renta es de $${impuesto} dólares`);
+    this.limpiarCampos();
+    }
   };
 
   calculoGastos(){
@@ -86,6 +91,22 @@ export class FormularioComponent implements OnInit {
       evt.preventDefault();
       this.calculoImpuestoRenta();
     });
+  }
+
+  alertError(texto:string){
+    Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        html: texto
+    })
+  }
+
+  alertSuccess(texto:string){
+    Swal.fire({
+      icon: 'success',
+      title: 'Impuesto a la Renta',
+      html: texto
+    })
   }
 
 }

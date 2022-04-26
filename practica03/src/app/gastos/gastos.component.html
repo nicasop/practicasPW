@@ -7,7 +7,7 @@
       </h2>
       <div [id]="gasto.selector" class="accordion-collapse collapse" [attr.aria-labelledby]="'flush-headind'+gasto.selector" data-bs-parent="#accordionFlushExample">
         <div class="accordion-body">{{gasto.descripcion}}</div><br/>
-        <button (click)="informacion(gasto.nombre)" class="btn btn-info">Información</button>
+        <button (click)="informacion(gasto.descripcionA)" class="btn btn-info">Información</button>
         <button (click)="borrarGastos(gasto.nombre)" class="btn btn-warning">Borrar</button>
       </div>
     </div>

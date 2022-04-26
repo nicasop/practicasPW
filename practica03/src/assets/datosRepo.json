@@ -1,0 +1,62 @@
+[
+    {
+        "id":1,
+        "name": "Hector Lavoe",
+        "username": "lavo",
+        "email": "heclavo@gmail.com"
+    },
+    {
+        "id":2,
+        "name": "Juanito Alimaña",
+        "username": "maña",
+        "email": "juanali21@gmail.com"
+    },
+    {
+        "id":3,
+        "name": "Eduardo Mora",
+        "username": "Mora",
+        "email": "edumora@gmail.com"
+    },
+    {
+        "id":4,
+        "name": "Michael Morales",
+        "username": "Maikol",
+        "email": "maik2202@gmail.com"
+    },
+    {
+        "id":5,
+        "name": "Sebastián Lombeida",
+        "username": "Santiago",
+        "email": "sebaslom@hotmail.com"
+    },
+    {
+        "id":6,
+        "name": "Pablo Riera",
+        "username": "Rivera",
+        "email": "plableins5@hotmail.com"
+    },
+    {
+        "id":7,
+        "name": "David Lascano",
+        "username": "Chacho",
+        "email": "dav_las@gmail.com"
+    },
+    {
+        "id":8,
+        "name": "Robin Fuemayor",
+        "username": "Rob",
+        "email": "fuem2106@gmail.com"
+    },
+    {
+        "id":9,
+        "name": "Carolina Perez",
+        "username": "Caro",
+        "email": "perez_caro21@gmail.com"
+    },
+    {
+        "id":10,
+        "name": "Maria del Carmen Quevedo",
+        "username": "Mary",
+        "email": "maryque@gmail.com"
+    }
+]
