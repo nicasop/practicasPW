@@ -1,0 +1,115 @@
+body{
+    margin: 0;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 2px 1px #efefef;
+    padding-bottom: 10px;
+    background-color: #898989;
+}
+
+.logo{
+    background-image: url("../img/logoP.png");
+    background-size: 100% 100%;
+    width: 80px;
+    height: 80px;
+}
+
+nav{
+    padding-right: 15px;
+    padding-top: 53px;
+}
+
+nav > a {
+    text-decoration: none;
+    border-bottom: 0.5px solid red;
+    margin: 0 10px;
+}
+nav > a:visited, nav > a:active{
+    color: #000000;
+}
+
+.descripcion{
+    padding-top: 15px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.imagen-descripcion{
+    flex: 1;
+    background-image: url("../img/banda.webp");
+    background-size: 90% 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.informacion{
+    flex: 1;
+}
+
+.reseña,.historia{
+    padding: 5px;
+    text-align: justify;
+}
+
+/* CANCIONES */
+.canciones{
+    display: flex;
+    padding-top: 15px;
+    flex-flow: row wrap;
+}
+
+.cancion{
+    flex: 1;
+}
+
+#cancion1{
+    background-image: url("../img/citaQuirofano.jpg");
+    background-size: 90% 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 350px;
+}
+
+#cancion2{
+    background-image: url("../img/narcicista.png");
+    background-size: 90% 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 350px;
+}
+
+#cancion3{
+    background-image: url("../img/mesaTriste.webp");
+    background-size: 90% 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 350px;
+}
+
+#cancion4{
+    background-image: url("../img/10am.jpg");
+    background-size: 90% 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 350px;
+}
+
+.controles{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.controles button{
+    background-color: transparent;
+    border: none;
+}
+
+.controles button:hover{
+    cursor: pointer;
+}
+
+/* VIDEOS */

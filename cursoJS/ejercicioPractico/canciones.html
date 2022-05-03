@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,600,1,0" />
+</head>
+<body>
+    <header>
+        <div class="logo">
+        </div>
+        <nav>
+            <a href="index.html">Historia</a>
+            <a href="canciones.html">Canciones</a>
+            <a href="videos.html">Videos</a>
+        </nav> 
+    </header>
+    <h1>CANCIONES FAVORITAS</h1>
+    <section class="canciones">
+        <div class="cancion">
+            <div id="cancion1"></div>
+            <div class="controles">
+                <audio id="can1">
+                    <source src="audio/citaQuirofano.mp3" type="audio/mp3">
+                </audio>
+                <button onclick="stopCancion1();">
+                    <span class="material-symbols-outlined">stop</span>
+                </button>
+                <button onclick="pauseCancion1();">
+                    <span class="material-symbols-outlined">pause</span>
+                </button>
+                <button onclick="playCancion1();">
+                    <span class="material-symbols-outlined">play_arrow</span>
+                </button>
+            </div>
+            </div>
+        </div>
+        <div class="cancion">
+            <div id="cancion2"></div>
+            <div class="controles">
+                <audio id="can2">
+                    <source src="audio/narcicista.mp3" type="audio/mp3">
+                </audio>
+                <button onclick="stopCancion3();">
+                    <span class="material-symbols-outlined">stop</span>
+                </button>
+                <button onclick="pauseCancion2();">
+                    <span class="material-symbols-outlined">pause</span>
+                </button>
+                <button onclick="playCancion2();">
+                    <span class="material-symbols-outlined">play_arrow</span>
+                </button>
+            </div>
+        </div>
+        <div class="cancion">
+            <div id="cancion3"></div>
+            <div class="controles">
+                <audio id="can3">
+                    <source src="audio/mesaTriste.mp3" type="audio/mp3">
+                </audio>
+                <button onclick="stopCancion3();">
+                    <span class="material-symbols-outlined">stop</span>
+                </button>
+                <button onclick="pauseCancion3();">
+                    <span class="material-symbols-outlined">pause</span>
+                </button>
+                <button onclick="playCancion3();">
+                    <span class="material-symbols-outlined">play_arrow</span>
+                </button>
+            </div>
+            </div>
+        </div>
+        <div class="cancion">
+            <div id="cancion4"></div>
+            <div class="controles">
+                <audio id="can4">
+                    <source src="audio/10am.mp3" type="audio/mp3">
+                </audio>
+                <button onclick="stopCancion4();">
+                    <span class="material-symbols-outlined">stop</span>
+                </button>
+                <button onclick="pauseCancion4();">
+                    <span class="material-symbols-outlined">pause</span>
+                </button>
+                <button onclick="playCancion4();">
+                    <span class="material-symbols-outlined">play_arrow</span>
+                </button>
+            </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="js/canciones.js"></script>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alexis Villavicencio">
+    <title>Formulario</title>
+</head>
+<body>
+   <form id="formulario">
+       <legend>Formulario de registro</legend>
+       <fieldset>
+           <legend>Datos Personales</legend>
+            <label for="nombre">Nombre:</label><br>
+            <input id="nombre" type="text" required/><br>
+            <label for="edad">Edad:</label><br>
+            <input id="edad" type="number" oninput="validateAge()" required/><br>
+            <label for="genero">Genero:</label><br>
+            <select name="" id="genero" required>
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+            </select><br>
+        </fieldset>
+        <fieldset>
+            <legend>Información del curso</legend>
+            <div>
+                <label>Curso</label><br>
+                <input type="radio" name="curso" id="En" value="Ingles" required> 
+                <label for="En">Ingles</label>
+                <input type="radio" name="curso" id="Ger" value="Alemán" required> 
+                <label for="Ger">Alemán</label>
+                <input type="radio" name="curso" id="Ita" value="Italiano" required> 
+                <label for="Ita">Italiano</label>
+            </div>
+            <label for="por">Porcentaje de Conocimiento</label><br>
+            <input type="range" id="por" min="1" max="100" step="1" value="50" oninput="displayValue(event)"><span id="rangeValue"></span><br>
+            <label for="horario">Jornada de disponibilidad</label><br>
+            <select id="horario" required>
+                <option value="Matutina">Matutina</option>
+                <option value="Vespertina">Vespertina</option>
+                <option value="Nocturna">Nocturna</option>
+            </select>
+            <div>
+                <label>Modalidad</label><br>
+                <input type="radio" name="moda" id="presencial" value="presencial" required> 
+                <label for="presencial">Presencial</label>
+                <input type="radio" name="moda" id="en-linea" value="en línea" required> 
+                <label for="en-linea">En línea</label>
+            </div>
+        </fieldset>
+        <br>
+        <input type="submit" value="Registrar">
+   </form>
+   <h2 align="center">Tabla de Resumen</h2> 
+   <div>
+       <table border="1" id="resumen">
+           <tr>
+               <th scope="col">Nombre</th>
+               <th scope="col">Edad</th>
+               <th scope="col">Género</th>
+               <th scope="col">Curso</th>
+               <th scope="col">Porcentaje</th>
+               <th scope="col">horario</th>
+               <th scope="col">Modalidad</th>
+           </tr>
+       </table>
+   </div>
+</body>
+<script src="script.js"></script>
+</html>
