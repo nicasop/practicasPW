@@ -1,0 +1,14 @@
+{
+  "name": "@d3/seamless-zoomable-map-tiles",
+  "main": "93bc0e9a047afbae@226.js",
+  "version": "226.0.0",
+  "homepage": "https://observablehq.com/@d3/seamless-zoomable-map-tiles",
+  "author": {
+    "name": "D3",
+    "url": "https://observablehq.com/@d3"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}
