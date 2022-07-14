@@ -1,11 +1,10 @@
 <nav>
-  <div class="nav-wrapper">
-    <a href="#" class="brand-logo">Logo</a>
+  <div class="nav-wrapper grey darken-2">
+    <a routerLink="" class="brand-logo" style="padding-left: 50px;">GESTION GASTOS</a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li><a href="/">Home</a></li>
-      <li><a href="/">Editar</a></li>
-      <li><a href="/">Consultar</a></li>
+      <li><a routerLink="">Gastos</a></li>
+      <li><a class="active" routerLink="registrar">Registrar</a></li>
     </ul>
   </div>
 </nav>
-<app-gastos></app-gastos>
+<router-outlet></router-outlet>

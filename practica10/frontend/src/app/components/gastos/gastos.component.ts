@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Gasto } from 'src/app/models/gasto';
 import { GastoService } from 'src/app/services/gasto.service';
 
@@ -11,7 +12,7 @@ import { GastoService } from 'src/app/services/gasto.service';
 })
 export class GastosComponent implements OnInit {
 
-  constructor( public gastoService: GastoService) { }
+  constructor( public gastoService: GastoService, public router: Router) { }
 
   ngOnInit(): void {
   }
@@ -28,7 +29,8 @@ export class GastosComponent implements OnInit {
     .subscribe(res=>{
       console.log(res);
       this.resetForm(form);
-      M.toast({html:'Gasto Guardado'});
+      this.router.navigateByUrl('');
+      // M.toast({html:'Gasto Guardado'});
     })
   }
 

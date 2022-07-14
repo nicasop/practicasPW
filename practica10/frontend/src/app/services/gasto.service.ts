@@ -7,7 +7,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class GastoService {
 
-  selectedGasto!: Gasto;
+  selectedGasto: Gasto;
+  gastos: Gasto[] = [];
+
   readonly url_api = 'http://localhost:3000/api/gastos';
   constructor( private http: HttpClient ) { 
     this.selectedGasto = new Gasto();
